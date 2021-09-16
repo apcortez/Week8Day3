@@ -7,7 +7,7 @@
     <link href="Style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="getTotale()">
 
     <div class="sidenav">
         <a href="HomePage.html">Home</a>
@@ -15,8 +15,36 @@
         <a href="Contatti.html">Contatti</a>
     </div>
     <div class="main">
-        <h1>Pizzeria Web</h1>
+        <h1>Conferma Ordine</h1>
+        <hr />
+        <div class="container" style="font-size:medium">
+            <form>
+                <h3>Prenotazione</h3>
+                <label for="nome">Nome: </label>
+                <input type="text" required id="nome" name="nome"><br /><br />
+
+                <label for="cognome">Cognome:</label>
+                <input type="text" required id="cognome" name="cognome"><br /><br />
+
+                <label for="cognome">Indirizzo:</label>
+                <input type="text" required id="indirizzo" name="indirizzo"><br /><br />
+
+                <label for="tel">Telefono:</label>
+                <input type="text" required pattern="[0-9]{10}" /><br /><br />
+
+                <label for="pagamento">Metodo di pagamento:</label><br>
+                <input type="radio" id="contanti" name="pagamento" value="contanti" checked>
+                <label for="contanti">Contanti</label>
+                <input type="radio" id="carta" name="pagamento" value="carta">
+                <label for="carta">Carta</label><br /><br />
+                <label for="ncarta" style="display:none">Numero carta: </label>
+                <input type="text" pattern="[0-9]{10}" id="ncarta" name="numcarta" style="display:none" /><br /><br />
+            </form>
+
+
+        </div>
     </div>
+
 
     <footer>
         <p>Pizzeria Web©</p>
